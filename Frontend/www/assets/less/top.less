@@ -1,0 +1,72 @@
+@distance: 7px;
+@TopRowHeight: 90px;
+@RightColumnWidth: 320px;
+
+#kma {
+  background-color: #EA862E;
+  height: @TopRowHeight;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  margin: 0 @distance 0 @distance;
+
+  padding: 15px;
+  text-align: center;
+  img {
+    transform: rotateX(180deg);
+    position: fixed;
+    top: @TopRowHeight;
+    left: @distance;
+  }
+  .title {
+    color: white;
+    font-size: 18px;
+    h3 {
+      line-height: 1.0;
+      margin-top: 10px;
+    }
+  }
+}
+
+#two-lines {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: @RightColumnWidth;
+  left: 100px+@distance*2;
+  padding: 15px @distance*2 0 @distance;
+  height: @TopRowHeight;
+  .top {
+    width: 100%;
+    height: @TopRowHeight/2 - 15px;
+    border-bottom: 1px solid;
+    color: #a3a3a3;
+    .tel {
+      font-size: 20px;
+      padding-right: @distance*3;
+    }
+    .work-hours {
+      font-size: 12px;
+      padding-right: @distance*3;
+    }
+    .free {
+      font-size: 15px;
+    }
+    button {
+      background-color: #EA862E;
+      color: white;
+      float: right;
+      margin-right: @distance;
+      margin-top: -10px;
+    }
+  }
+}
+.bottom {
+  padding-top: @distance;
+  height: @TopRowHeight/2 - 15px;
+  cursor: pointer;
+  a {
+    color: white;
+    font-size: 17px;
+  }
+}

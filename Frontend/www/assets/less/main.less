@@ -1,0 +1,128 @@
+@mainColor: blue;
+@import "pizza/pizza-card";
+@import "top";
+@import "right";
+@import "order";
+
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.container {
+  background-color: rgb(247, 230, 207);
+  margin: 0;
+  padding-right: @RightColumnWidth + 15px;
+  padding-top: @TopRowHeight + 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.inner-container {
+  max-width: 1000px;
+  padding: 0;
+  margin: auto;
+  height: 100%;
+}
+
+.right-column {
+  background-color: rgb(247, 230, 207);;
+  width: @RightColumnWidth;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 91;
+}
+
+.top-row {
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: @RightColumnWidth;
+  background: rgba(6, 6, 6, 0.8);
+  height: @TopRowHeight;
+  z-index: 90;
+}
+
+.discount {
+  position: fixed;
+  bottom: 0;
+  left: @distance;
+  padding: 10px;
+  width: 100px;
+  background: @color;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+
+  img {
+    position: fixed;
+    bottom: 110px;
+    left: @distance;
+    width: 100px;
+  }
+  .title {
+    font-size: 15px;
+    border-bottom: 2px dotted #d16301;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+  }
+}
+
+#footer {
+  border-top: 1px solid #c8c8c8;
+  padding: 22px @RightColumnWidth 22px 0;
+  color: darkred;
+  background-color: #fff;
+  text-align: center;
+  font-size: 15px;
+}
+
+.all-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: xx-large;
+
+  .all-count {
+    margin-left: @distance;
+  }
+}
+
+.all-pizza {
+  text-align: center;
+  margin-bottom: @distance*2;
+  .pizza-types {
+    display: inline-block;
+  }
+  .nav-pills > li > a {
+    color: @color;
+  }
+  .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: white;
+    background-color: @color;
+  }
+}
+
+@media (max-width: 800px) {
+  .right-column {
+    width: 290px;
+  }
+  .top-row, #two-lines{
+      right: 290px;
+  }
+  
+  .order-label {
+    .title {
+      font-size: 10px;
+    }
+  }
+}
+
+.orange {
+  background-color: #EA862E;
+}

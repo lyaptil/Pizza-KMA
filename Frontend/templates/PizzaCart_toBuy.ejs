@@ -1,0 +1,15 @@
+<div class="row">
+    <img class="img-pizza" alt="Піца" src="<%= pizza.icon %>">
+
+    <p class="order-name-size"><strong><%= pizza.title %></strong> (<%= pizza[size].print %>)</p>
+    <div class="order-info">
+        <img class="img-size" src="assets/images/size-icon.svg">
+        <span class="size"><small><%= pizza[size].size %></small></span>
+        <img class="img-weight" src="assets/images/weight.svg">
+        <span class="weight"><small><%= pizza[size].weight %></small></span>
+    </div>
+    <div class="price-panel">
+        <span class="price"><strong><%= (pizza[size].price)*quantity %> грн.</strong></span>
+        <span class="amount"><strong><%= quantity %></strong></span>
+    </div>
+</div>

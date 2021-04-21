@@ -1,0 +1,38 @@
+@color: #EA862E;
+
+.order-container {
+  padding: 10px;
+  .user-data {
+    margin: auto;
+    padding: 30px;
+    .description {
+      padding-left: 15px;
+    }
+    .user-info {
+      border: 1px solid #eff8f6;
+      background-color: white;
+      border-left: 3px dashed @color;
+      padding: 18px;
+    }
+  }
+  .butt-next {
+    float: right;
+    button {
+      font-size: 18px;
+      background: @color;
+      background: -webkit-gradient(linear, left top, left bottom, from(@color + #151515), to(@color - #151515));
+      background: -moz-linear-gradient(top, @color + #151515,  @color - #151515);
+      border: none;
+      padding: 9px 25px 9px 2px;
+    }
+  }
+}
+.map {
+  margin-bottom: 20px;
+  #googleMap {
+    height: 350px;
+    width: 80%;
+    margin: auto;
+    padding: auto;
+  }
+}

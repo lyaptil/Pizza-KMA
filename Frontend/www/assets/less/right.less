@@ -1,0 +1,131 @@
+@RightColumnWidth: 320px;
+@BottomHeight: 100px;
+@TopHeight: 90px;
+@color: #EA862E;
+
+.order-panel {
+  background-color: white;
+  position: absolute;
+  height: @TopHeight;
+  width: 100%;
+  top: 0;
+  right: 0;
+  padding-top: 13%;
+  .order-label {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    .title {
+
+      padding: 7px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    color: rgba(180, 180, 180, 0.9);
+    float: left;
+    font-size: 12px;
+    background-color: white;
+    width: 49%;
+
+  }
+}
+
+.middle-panel {
+  box-shadow: -3px 0 5px #cfd4c4;
+  position: absolute;
+  top: @TopHeight;
+  bottom: @BottomHeight;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .row {
+    border-bottom: 1px solid #c8c8c8;
+    height: 120px;
+    padding: 20px 61px 10px 24px;
+    overflow: hidden;
+    position: relative;
+    .order-name-size {
+      line-height: 16px;
+      font-size: 20px;
+      color: @color;
+    }
+    .order-info {
+      margin-bottom: 10px;
+      .img-weight {
+        padding-left: 10px;
+      }
+    }
+    .price-panel {
+      .price {
+        padding-right: 7px;
+      }
+      .amount {
+        text-align: center;
+        padding: 0 5px;
+      }
+      .btn-default {
+        color: @color;
+        margin-left: 13px;
+      }
+    }
+    .img-pizza {
+      position: absolute;
+      right: -48px;
+      top: 15px;
+      border-radius: 50% 0 0 50%;
+      max-height: 96px;
+      max-width: 96px;
+    }
+  }
+}
+
+.bottom-panel {
+  box-shadow: -3px 0 5px #cfd4c4;
+  padding: 15px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: @BottomHeight;
+
+  .sum {
+    font-weight: bold;
+    height: @BottomHeight/2-20px;
+    .title {
+      float: left;
+      text-align: left;
+      width: 60%;
+    }
+
+    #count-sum {
+      float: left;
+      width: 40%;
+      text-align: right;
+      font-size: 17px;
+    }
+  }
+  .to-order {
+    #butt-order {
+      background: @color;
+      background: -webkit-gradient(linear, left top, left bottom, from(@color + #151515), to(@color - #151515));
+      background: -moz-linear-gradient(top,  @color + #151515,  @color - #151515);
+      border: none;
+    }
+  }
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
